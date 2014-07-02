@@ -227,8 +227,6 @@ class ScreenRecorderGuard:
         while not self.escaped:
             while display.pending_events():
                 ev = display.next_event()
-                print ev.type
-                print ev.detail
                 if ev.type == X.ButtonPress:
                     pressed = True
                 elif ev.type == X.ButtonRelease:
